@@ -1,28 +1,26 @@
 import os
 
-# Função que exibe o menu principal
 def menu():
     os.system('cls')  # Limpa a tela
     print("\nMenu Principal:")
-    print("(1) - Aprender")  # Opção para aprender sobre comandos
-    print("(2) - Fazer um Quiz")  # Opção para fazer o quiz
-    print("(3) - Sair")  # Opção para sair do programa
+    print("(1) - Aprender")  
+    print("(2) - Fazer um Quiz")  
+    print("(3) - Sair")  
     
-# Função para o modo de aprendizado
 def aprender():
     while True:  # Loop para garantir que o usuário só saia do modo aprender quando escolher a opção "5"
-        os.system('cls')  # Limpa a tela
+        os.system('cls')  
         print("\nModo Aprender:")
-        print("(1) - Como exibir mensagens na tela?")  # Explicação sobre o comando print()
-        print("(2) - Como receber dados do usuário?")  # Explicação sobre o comando input()
-        print("(3) - Quem é o criador da linguagem Python?")  # Explicação sobre o criador do Python
-        print("(4) - Quando o Python foi lançado?")  # Explicação sobre o lançamento do Python
-        print("(5) - Voltar ao menu principal")  # Opção para voltar ao menu principal
-        opcao = input("Escolha uma opção: ")  # Pergunta para o usuário escolher a opção
+        print("(1) - Como exibir mensagens na tela?")  
+        print("(2) - Como receber dados do usuário?")  
+        print("(3) - Quem é o criador da linguagem Python?")  
+        print("(4) - Quando o Python foi lançado?")  
+        print("(5) - Voltar ao menu principal")  
+        opcao = input("Escolha uma opção: ")  
 
         # Se o usuário escolheu a opção 1, mostra a explicação sobre o comando print()
         if opcao == '1':
-            os.system('cls')  # Limpa a tela
+            os.system('cls')  
             print("\nExplicação sobre o comando print():")
             print("🟥 O comando print() é utilizado para exibir mensagens na tela do usuário.")
             print('⬜ Exemplo: print("Olá, Mundo!")')
@@ -41,8 +39,8 @@ def aprender():
             print("⬜ Este comando solicita que o usuário digite seu nome, e armazena a resposta na variável 'nome'.")
             os.system('pause')
 
-            fazer_quiz = input("Você deseja fazer um quiz sobre esse tema? (s/n): ")  # Pergunta se quer fazer o quiz
-            if fazer_quiz.lower() == 's':  # Se o usuário respondeu "s", chama a função do quiz
+            fazer_quiz = input("Você deseja fazer um quiz sobre esse tema? (s/n): ")  
+            if fazer_quiz.lower() == 's':  
                 quiz()
 
         # Se o usuário escolheu a opção 3, mostra a explicação sobre o criador do Python
@@ -53,8 +51,8 @@ def aprender():
             print("⬜ Ele iniciou o projeto em 1980 e a primeira versão foi lançada em 1991.")
             os.system('pause')
 
-            fazer_quiz = input("Você deseja fazer um quiz sobre esse tema? (s/n): ")  # Pergunta se quer fazer o quiz
-            if fazer_quiz.lower() == 's':  # Se o usuário respondeu "s", chama a função do quiz
+            fazer_quiz = input("Você deseja fazer um quiz sobre esse tema? (s/n): ")  
+            if fazer_quiz.lower() == 's':  
                 quiz()
 
         # Se o usuário escolheu a opção 4, mostra a explicação sobre o lançamento do Python
@@ -65,8 +63,8 @@ def aprender():
             print("⬜ A linguagem foi projetada para ser simples e fácil de ler, com foco em legibilidade de código.")
             os.system('pause')
 
-            fazer_quiz = input("Você deseja fazer um quiz sobre esse tema? (s/n): ")  # Pergunta se quer fazer o quiz
-            if fazer_quiz.lower() == 's':  # Se o usuário respondeu "s", chama a função do quiz
+            fazer_quiz = input("Você deseja fazer um quiz sobre esse tema? (s/n): ")  
+            if fazer_quiz.lower() == 's':  
                 quiz()
 
         # Se o usuário escolheu a opção 5, simplesmente retorna ao menu
@@ -77,7 +75,7 @@ def aprender():
 
 # Função do quiz, onde o usuário vai responder as perguntas
 def quiz():
-    os.system('cls')  # Limpa a tela
+    os.system('cls')  
     print("\nQuiz - Teste seus conhecimentos!")
     acertos = 0  # Inicializa o contador de acertos
 
@@ -91,7 +89,7 @@ def quiz():
     
 
     # Pergunta 2
-    os.system('cls')  # Limpa a tela
+    os.system('cls')  
     resposta = input("2. Como receber dados do usuário em Python? \n(a) input() \n(b) print() \n(c) read() \n(d) get() \nEscolha a opção (a/b/c/d): ")
     if resposta.lower() == 'a':  # Se a resposta for a alternativa correta "a"
         print("Correto!")
@@ -101,7 +99,7 @@ def quiz():
     
 
     # Pergunta 3: Quem é o criador da linguagem Python?
-    os.system('cls')  # Limpa a tela
+    os.system('cls')  
     resposta = input("3. Quem é o criador da linguagem Python? \n(a) Steve Jobs \n(b) Bill Gates \n(c) Guido van Rossum \n(d) Mark Zuckerberg \nEscolha a opção (a/b/c/d): ")
     if resposta.lower() == 'c':  # Se a resposta for a alternativa correta "c"
         print("Correto!")
@@ -111,7 +109,7 @@ def quiz():
     
 
     # Pergunta 4: Quando o Python foi lançado?
-    os.system('cls')  # Limpa a tela
+    os.system('cls')  
     resposta = input("4. Quando o Python foi lançado? \n(a) 1980 \n(b) 1991 \n(c) 2000 \n(d) 2005 \nEscolha a opção (a/b/c/d): ")
     if resposta.lower() == 'b':  # Se a resposta for a alternativa correta "b"
         print("Correto!")
